@@ -1,19 +1,13 @@
 package livros;
 
-public class Impresso extends Livro{
-
+public class Impresso extends Livro {
     private float frete;
     private int estoque;
 
     public Impresso(String titulo, String editora, String autores, float preco, float frete, int estoque) {
         super(titulo, editora, autores, preco);
-        setFrete(frete);
-        setEstoque(estoque);
-    }
-
-    @Override
-    public String toString() {
-        return "";
+        this.frete = frete;
+        this.estoque = estoque;
     }
 
     public void atualizarEstoque() {
@@ -34,5 +28,13 @@ public class Impresso extends Livro{
 
     public void setFrete(float frete) {
         this.frete = frete;
+    }
+
+    @Override
+    public String toString() {
+        return "Impresso{" +
+                "frete=" + frete +
+                ", estoque=" + estoque +
+                '}';
     }
 }

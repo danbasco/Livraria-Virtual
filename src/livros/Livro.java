@@ -1,30 +1,16 @@
 package livros;
 
 public abstract class Livro {
-
-    private String titulo, editora, autores;
+    private String titulo;
+    private String editora;
+    private String autores;
     private float preco;
 
     public Livro(String titulo, String editora, String autores, float preco) {
-
-        setTitulo(titulo);
-        setEditora(editora);
-        setAutores(autores);
-        setPreco(preco);
-
-    }
-
-    public String toString(){
-
-        return "";
-    }
-
-    public String getEditora() {
-        return editora;
-    }
-
-    public void setEditora(String editora) {
+        this.titulo = titulo;
         this.editora = editora;
+        this.autores = autores;
+        this.preco = preco;
     }
 
     public String getTitulo() {
@@ -33,6 +19,14 @@ public abstract class Livro {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+
+    public void setEditora(String editora) {
+        this.editora = editora;
     }
 
     public String getAutores() {
@@ -51,4 +45,13 @@ public abstract class Livro {
         this.preco = preco;
     }
 
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", editora='" + editora + '\'' +
+                ", autores='" + autores + '\'' +
+                ", preco=" + preco +
+                '}';
+    }
 }
